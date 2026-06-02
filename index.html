@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>La Pelleria | Bar de Tapes a Caldes de Montbui - Com a casa</title>
+    <meta name="description" content="Benvinguts a La Pelleria, el teu bar de tapes i restaurant a Caldes de Montbui. Vine a gaudir de les nostres tapes casolanes, coques, entrepans i un menú setmanal exquisit. Bona gent, bones tapes!">
+    <meta name="keywords" content="La Pelleria, Caldes de Montbui, bar de tapes, restaurant, menú setmanal, coques, entrepans, menjar casolà, tapes Caldes">
+    <meta name="author" content="La Pelleria">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="La Pelleria | Bar de Tapes a Caldes de Montbui">
+    <meta property="og:description" content="Menjar casolà i tapes exquisides en un ambient familiar i acollidor. Consulta la nostra carta i menú setmanal!">
+    <meta property="og:image" content="assets/logo.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="La Pelleria | Bar de Tapes a Caldes de Montbui">
+    <meta property="twitter:description" content="Menjar casolà i tapes exquisides en un ambient familiar i acollidor. Consulta la nostra carta i menú setmanal!">
+    <meta property="twitter:image" content="assets/logo.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+    <!-- Estils -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         HEADER / NAVEGACIÓ
+         ========================================== -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#inici" class="logo-nav" id="nav-logo-link">
+                <img src="assets/logo.jpg" alt="Logo La Pelleria" id="nav-logo-img">
+                <span id="nav-brand-name">La Pelleria</span>
+            </a>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Obrir menú de navegació">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#inici" class="nav-link active" id="link-inici">Inici</a></li>
+                    <li><a href="#menu-setmanal" class="nav-link" id="link-menu-setmanal">Menú Setmanal</a></li>
+                    <li><a href="#carta" class="nav-link" id="link-carta">La Carta</a></li>
+                    <li><a href="#galeria" class="nav-link" id="link-galeria">Galeria</a></li>
+                    <li><a href="#contacte" class="nav-link" id="link-contacte">On som & Reserves</a></li>
+                    <li><a href="#reserva-form-section" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.85rem;" id="nav-btn-reserva">Reservar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class="hero" id="inici">
+        <div class="hero-content">
+            <div class="hero-logo-container">
+                <img src="assets/logo.jpg" alt="La Pelleria" class="hero-logo" id="hero-logo-img">
+            </div>
+            <span class="hero-tagline" id="hero-tagline-text">bona gent, bones tapes</span>
+            <h1 class="hero-title" id="hero-main-title">La Pelleria</h1>
+            <p class="hero-desc" id="hero-description">Sente't com a casa en el nostre acollidor bar de tapes al centre històric de Caldes de Montbui. Productes de qualitat i cuina casolana amb passió.</p>
+            <div class="hero-actions">
+                <a href="#carta" class="btn btn-primary" id="hero-action-carta">Veure la Carta</a>
+                <a href="#reserva-form-section" class="btn btn-secondary" id="hero-action-reserves">Reservar Taula</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         BARRA D'ESTAT DINÀMICA (OBERT/TANCAT)
+         ========================================== -->
+    <div class="status-bar-wrapper">
+        <div class="status-bar" id="status-bar">
+            <div class="status-info">
+                <div class="status-dot" id="status-dot"></div>
+                <div class="status-text-group">
+                    <div class="status-text" id="status-text">Comprovant estat...</div>
+                    <div class="status-hours" id="status-hours">Horari d'avui: carregant...</div>
+                </div>
+            </div>
+            <div class="status-contact-quick">
+                <a href="tel:660732637" class="status-contact-item" id="quick-call">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>660 73 26 37</span>
+                </a>
+                <a href="https://www.google.com/maps/search/?api=1&query=La+Pelleria+Caldes+de+Montbui" target="_blank" class="status-contact-item" id="quick-address">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span>Plaça de la República, 3 (Carrer d'Homs, 32), Caldes de Montbui</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         MENÚ SETMANAL
+         ========================================== -->
+    <section class="weekly-menu-section" id="menu-setmanal">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Fresquet, Variat i Casolà</span>
+                <h2 class="section-title">El Menú Setmanal</h2>
+            </div>
+            
+            <div class="weekly-board" id="weekly-board">
+                <!-- Preu -->
+                <div class="board-badge-price" id="board-price-badge">
+                    <span>14€</span>
+                    <span>Sencer</span>
+                </div>
+                
+                <div class="board-header">
+                    <h3 class="board-subtitle" id="board-subtitle-text">Menú de Migdia</h3>
+                    <p class="board-inclusion" id="board-inclusion-details">* Inclou pa, aigua o copa de vi</p>
+                </div>
+                
+                <div class="board-courses">
+                    <!-- Primers -->
+                    <div class="course-category" id="course-primers">
+                        <h4 class="course-title">Primers</h4>
+                        <ul class="course-list">
+                            <li class="course-item">Amanida verda de temporada</li>
+                            <li class="course-item">Sopa freda de meló refrescant</li>
+                            <li class="course-item">Caneló tradicional d'espinacs de l'hort</li>
+                            <li class="course-item">Cruixent "Torta de camarón" estil gadità</li>
+                            <li class="course-item">Empedrat català amb tonyina i ou dur</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Segons -->
+                    <div class="course-category" id="course-segons">
+                        <h4 class="course-title">Segons</h4>
+                        <ul class="course-list">
+                            <li class="course-item">Pop a la gallega amb parmentier de patata</li>
+                            <li class="course-item">Mandonguilles de la iaia guisades amb salsa</li>
+                            <li class="course-item">Fingers de vedella cruixents amb patates fregides</li>
+                            <li class="course-item">Cansalada a baixa temperatura amb ou i patates</li>
+                            <li class="course-item">Verat fresc a la planxa amb all i julivert</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Postres -->
+                    <div class="course-category" id="course-postres">
+                        <h4 class="course-title">Postres</h4>
+                        <ul class="course-list">
+                            <li class="course-item">Síndria ben dolça i fresca</li>
+                            <li class="course-item">Mel i mató artesà local</li>
+                            <li class="course-item">Crema catalana casolana cremada</li>
+                            <li class="course-item">Maduixes fresques amb nata muntada</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="board-footer">
+                    <p class="half-menu-price" id="half-menu-price-text">Opció de mig menú: <strong>11€</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         LA CARTA INTERACTIVA
+         ========================================== -->
+    <section class="carta-section" id="carta">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Tria, comparteix i gaudeix</span>
+                <h2 class="section-title">La Nostra Carta</h2>
+            </div>
+            
+            <!-- Filtres per categories -->
+            <div class="menu-filters" id="menu-filters">
+                <button class="filter-btn active" data-category="all" id="filter-all">Tot</button>
+                <button class="filter-btn" data-category="tapes" id="filter-tapes">Les Tapes</button>
+                <button class="filter-btn" data-category="plats" id="filter-plats">Els Plats</button>
+                <button class="filter-btn" data-category="coques" id="filter-coques">Les Coques</button>
+                <button class="filter-btn" data-category="entrepans" id="filter-entrepans">Entrepans</button>
+                <button class="filter-btn" data-category="vermut" id="filter-vermut">Packs Vermut</button>
+                <button class="filter-btn" data-category="infantil" id="filter-infantil">Per als més petits</button>
+            </div>
+            
+            <!-- Graella de plats de la carta -->
+            <div class="menu-grid" id="menu-grid">
+                
+                <!-- FEATURED ITEM: Brioche -->
+                <div class="menu-item-card featured-card" data-category="tapes" id="item-brioche">
+                    <div class="featured-img-container">
+                        <img src="assets/galeria-brioche.jpg" alt="Brioche amb tàrtar de salmó" loading="lazy">
+                    </div>
+                    <div class="featured-content">
+                        <div>
+                            <span class="featured-tag">Destacat de la casa</span>
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Brioix amb tàrtar de salmó</h3>
+                                <span class="menu-item-price">9,50 €</span>
+                            </div>
+                            <p class="menu-item-desc">Pa brioix mantegós i torrat amb una base de ruca, tàrtar de salmó marinat fresc i decorat amb gotes de formatge crema i sèsam negre.</p>
+                        </div>
+                        <div class="menu-item-meta">
+                            <span class="diet-badge gf">Recomanat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FEATURED ITEM: Gambes & Zamburinyes -->
+                <div class="menu-item-card featured-card" data-category="tapes" id="item-gambes-zamburinyes">
+                    <div class="featured-img-container">
+                        <img src="assets/galeria-gambes-zamburinyes.jpg" alt="Gambes a l'allet i zamburinyes" loading="lazy">
+                    </div>
+                    <div class="featured-content">
+                        <div>
+                            <span class="featured-tag">Novetats</span>
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Gambes a l'allet & Zamburinyes</h3>
+                                <span class="menu-item-price">5,00 € / 1,80 € (u.)</span>
+                            </div>
+                            <p class="menu-item-desc">Gambes saltades amb alls laminats daurats i un toc de bitxo. També oferim saboroses zamburinyes individuals gratinades amb salsa de marisc fina.</p>
+                        </div>
+                        <div class="menu-item-meta">
+                            <span class="diet-badge spicy">Toc picant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAPES -->
+                <div class="menu-item-card" data-category="tapes" id="item-braves">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Braves de La Pelleria</h3>
+                        <span class="menu-item-price">8,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Patates tallades a daus, cruixents per fora i toves per dins, amb la nostra salsa brava secreta picanteta i allioli casolà.</p>
+                    <div class="menu-item-meta">
+                        <span class="diet-badge veggie">Vegetarià</span>
+                        <span class="diet-badge spicy">Picant</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-ous-estrellats">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Ous estrellats amb pernil</h3>
+                        <span class="menu-item-price">9,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Base de patates fregides a rodanxes, ous de pagès ferrats trencats per sobre i encenalls de pernil ibèric de gla de primera qualitat.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-croquetes">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Croquetes casolanes (unitat)</h3>
+                        <span class="menu-item-price">1,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Massa super cremosa elaborada a mà. Sabors disponibles: Cua de bou, Secret amb mel, Rostit tradicional, o Verdures amb formatge de cabra.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-torreznos">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Torreznos cruixents</h3>
+                        <span class="menu-item-price">6,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Panceta de porc de Sòria rostida i fregida a alta temperatura per aconseguir una pellassa hiper cruixent i un interior melós.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-fingers-pollastre">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Fingers de pollastre casolans</h3>
+                        <span class="menu-item-price">8,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Tires de pit de pollastre marinades amb herbes, arrebossades amb panko japonès súper cruixent i servides amb salsa de mel i mostassa.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-gildes">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Dúo de gildes clàssiques</h3>
+                        <span class="menu-item-price">3,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">La tapa basca per excel·lència. Dues broquetes d'oliva verda farcida, anxova del Cantàbric en salaó i bitxo d'Ibarra en vinagre (guindilla).</p>
+                    <div class="menu-item-meta">
+                        <span class="diet-badge gf">Sense gluten</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-seitons">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Seitons en vinagre</h3>
+                        <span class="menu-item-price">6,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Seitons frescos marinats en vinagre de vi blanc, all i julivert picat, banyats en oli d'oliva verge extra.</p>
+                    <div class="menu-item-meta">
+                        <span class="diet-badge gf">Sense gluten</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-anxoves">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Anxoves de l'Escala</h3>
+                        <span class="menu-item-price">8,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Filets de primera qualitat en salaó, servits sobre una base de tomàquet ratllat i un rajolí d'oli d'oliva.</p>
+                    <div class="menu-item-meta">
+                        <span class="diet-badge gf">Sense gluten</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-russa">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Amanida russa tradicional</h3>
+                        <span class="menu-item-price">8,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Patata, pastanaga i ou bullits, barrejats amb bona tonyina del Nord, maionesa suau i decorat amb olives i tires de pebrot escalivat.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-escalivada-anxoves">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Escalivada amb anxoves</h3>
+                        <span class="menu-item-price">10,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Pebrot vermell, albergínia i ceba rostits a la llenya i pelats a mà, amanits amb oli i coberts amb filets d'anxova premium.</p>
+                    <div class="menu-item-meta">
+                        <span class="diet-badge gf">Sense gluten</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-hummus">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Hummus de curri casolà</h3>
+                        <span class="menu-item-price">8,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Puré cremós de cigrons i tahina aromatitzat amb espècies de curri i llimona, servit amb pa de pita calent per dipejar.</p>
+                    <div class="menu-item-meta">
+                        <span class="diet-badge veggie">Vegetarià</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-taula-pernil">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Taula de pernil ibèric</h3>
+                        <span class="menu-item-price">19,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Generosa taula de pernil ibèric de gla tallat fi, acompanyat de llesques de pa de pagès amb tomàquet i oli.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-taula-embotits">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Taula d'embotits de Caldes</h3>
+                        <span class="menu-item-price">18,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Selecció d'embotits artesanals locals de la comarca: llonganissa, bull blanc i negre, i xoriç sec amb pa amb tomàquet.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-taula-formatges">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Taula de formatges nacionals</h3>
+                        <span class="menu-item-price">18,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Formatges variats de cabra, ovella, vaca i un blau intens, acompanyats de melmelades casolanes i fruits secs torrats.</p>
+                    <div class="menu-item-meta">
+                        <span class="diet-badge veggie">Vegetarià</span>
+                        <span class="diet-badge gf">Sense gluten</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="tapes" id="item-musclos">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Musclos a la marinera</h3>
+                        <span class="menu-item-price">8,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Musclos frescos de roca cuinats al vapor amb ceba, all, tomàquet i una reducció de vi blanc lleugerament picant.</p>
+                    <div class="menu-item-meta">
+                        <span class="diet-badge spicy">Picant</span>
+                    </div>
+                </div>
+
+                <!-- PLATS -->
+                <div class="menu-item-card" data-category="plats" id="item-amanida-burrata">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Amanida de tomàquets amb burrata</h3>
+                        <span class="menu-item-price">9,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Tomàquets madurs de km 0, pesto fresc d'alfàbrega, burrata de búfala italiana de 150g cremosa i pinyons torrats.</p>
+                    <div class="menu-item-meta">
+                        <span class="diet-badge veggie">Vegetarià</span>
+                        <span class="diet-badge gf">Sense gluten</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="plats" id="item-parmentier-bolets">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Parmentier amb bolets i ou ferrat</h3>
+                        <span class="menu-item-price">10,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Puré de patates cremós estil Robuchon, barreja de bolets de temporada saltats i un ou ecològic ferrat a sobre amb tòfona ratllada.</p>
+                    <div class="menu-item-meta">
+                        <span class="diet-badge veggie">Vegetarià</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="plats" id="item-hamburguesa">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Hamburguesa de vedella "La Pelleria"</h3>
+                        <span class="menu-item-price">11,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">200g de carn de vedella seleccionada a la graella, canonges, encenalls de formatge manxec curat i maionesa amb aroma de tòfona.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="plats" id="item-galta">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Galta de porc guisada</h3>
+                        <span class="menu-item-price">12,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Galta de porc desossada cuinada lentament amb vi negre del Vallès i verdures, molt melosa, sobre base de puré de patata.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="plats" id="item-canelo-marisc">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Caneló XXL de marisc</h3>
+                        <span class="menu-item-price">9,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Gran caneló farcit de rap, gambes i lluç amb una beixamel fina de marisc gratinat amb formatge emmental.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="plats" id="item-tartar-salmo">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Tàrtar de salmó clàssic</h3>
+                        <span class="menu-item-price">11,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Daus de salmó marinat, ceba tendra, tàperes i alvocat picat amb salsa soja i un toc de mostassa de Dijon, servit amb torrades primes.</p>
+                </div>
+
+                <!-- COQUES -->
+                <div class="menu-item-card" data-category="coques" id="item-coca-pork">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Coca de pulled pork i cheddar</h3>
+                        <span class="menu-item-price">10,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Coca de fleca fina cruixent coberta de carn de porc especiada i esfilagarsada amb salsa barbacoa, formatge cheddar fos i ceba cruixent.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="coques" id="item-coca-botifarra">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Coca de botifarra i escalivada</h3>
+                        <span class="menu-item-price">8,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">La combinació perfecta catalana. Botifarra de Caldes esparracada a la graella sobre tires de pebrot i albergínia escalivats.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="coques" id="item-coca-escalivada">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Coca d'escalivada i anxoves</h3>
+                        <span class="menu-item-price">12,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Massa de coca untada amb oli d'oliva verge, una bona base d'escalivada fumada i coronada amb anxoves de l'Escala.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="coques" id="item-coca-salmo">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Coca de salmó, alvocat i burrata</h3>
+                        <span class="menu-item-price">14,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Refrescant i gourmet. Salmó fumat selecte, làmines d'alvocat, burrata trencada a sobre i un rajolí de vinagreta de fruits secs.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="coques" id="item-coca-pernil">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Coca de pernil ibèric</h3>
+                        <span class="menu-item-price">17,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Pa de coca artesanal de Caldes de Montbui ben cruixent amb tomàquet de penjar, cobert amb fines tallades de pernil ibèric de gla.</p>
+                </div>
+
+                <!-- ENTREPANS -->
+                <div class="menu-item-card" data-category="entrepans" id="item-entrepà-llom">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Entrepà de llom i formatge</h3>
+                        <span class="menu-item-price">6,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Llom de porc a la planxa sucós, formatge fos en pa cruixent tipus flauta acabat de torrar.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="entrepans" id="item-pepito">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Pepito de vedella</h3>
+                        <span class="menu-item-price">7,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Bistec de vedella molt tendre, marcat a alta temperatura amb all ratllat i pebrot verd fregit opcional.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="entrepans" id="item-entrepà-pollastre">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Pit de pollastre amb maionesa</h3>
+                        <span class="menu-item-price">6,80 €</span>
+                    </div>
+                    <p class="menu-item-desc">Pit de pollastre planxa amb enciam fresc, tomàquet i salsa maionesa suau.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="entrepans" id="item-baco">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Entrepà de bacó i formatge</h3>
+                        <span class="menu-item-price">5,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Bacó fumat cruixent a la planxa amb formatge emmental fos.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="entrepans" id="item-xistorra">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Entrepà de xistorra</h3>
+                        <span class="menu-item-price">7,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Xistorra de Navarra a la graella, ben calenta i amb tot el seu sabor intens.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="entrepans" id="item-llonganissa">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Entrepà de llonganissa de Caldes</h3>
+                        <span class="menu-item-price">6,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Llonganissa artesanal local de curació òptima amb pa untat de tomàquet i oli.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="entrepans" id="item-truita-francesa">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Entrepà de truita francesa</h3>
+                        <span class="menu-item-price">6,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Truita francesa feta al moment amb dos ous de gallines felices, en pa amb tomàquet suau.</p>
+                    <div class="menu-item-meta">
+                        <span class="diet-badge veggie">Vegetarià</span>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="entrepans" id="item-truita-farcida">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Entrepà de truita farcida</h3>
+                        <span class="menu-item-price">8,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Truita sucosa farcida de formatge emmental, pernil dolç de qualitat o bacó al gust.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="entrepans" id="item-bikini">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Bikini clàssic</h3>
+                        <span class="menu-item-price">4,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">El de tota la vida. Pa de motlle torrat amb abundant mantega, pernil dolç i formatge fos.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="entrepans" id="item-bull-blanc">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Entrepà de bull blanc</h3>
+                        <span class="menu-item-price">6,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Bull blanc artesanal elaborat per xarcuters locals, acompanyat de pa amb tomàquet.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="entrepans" id="item-bull-negre">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Entrepà de bull negre</h3>
+                        <span class="menu-item-price">6,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Embotit tradicional de sang ("bull negre") de sabor característic i textura fantàstica.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="entrepans" id="item-xoric">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Entrepà de xoriç ibèric</h3>
+                        <span class="menu-item-price">7,20 €</span>
+                    </div>
+                    <p class="menu-item-desc">Xoriç ibèric curat d'aroma intens amb pa amb tomàquet de penjar.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="entrepans" id="item-formatge-manxec">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Entrepà de formatge manxec</h3>
+                        <span class="menu-item-price">7,80 €</span>
+                    </div>
+                    <p class="menu-item-desc">Abundants talls de formatge manxec curat amb pa amb tomàquet i un toc d'oli d'oliva verge.</p>
+                    <div class="menu-item-meta">
+                        <span class="diet-badge veggie">Vegetarià</span>
+                    </div>
+                </div>
+
+                <!-- VERMUT PACKS -->
+                <div class="menu-item-card featured-card" data-category="vermut" id="item-vermut-fred-card">
+                    <div class="featured-img-container">
+                        <img src="assets/galeria-vermut-fred.jpg" alt="Pack Vermut Fred" loading="lazy">
+                    </div>
+                    <div class="featured-content">
+                        <div>
+                            <span class="featured-tag">Fórmula ideal</span>
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Pack Vermut Fred</h3>
+                                <span class="menu-item-price">17,00 €</span>
+                            </div>
+                            <p class="menu-item-desc">Combina el migdia. Inclou 2 begudes a escollir (canyes Estrella Damm ben fredes, refresc o vermut de l'aixeta), patates xip cruixents, olives farcides selectes i una llauna d'escopinyes en salsa.</p>
+                        </div>
+                        <div class="menu-item-meta">
+                            <span class="diet-badge gf">Ideal 2 persones</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="vermut" id="item-vermut-calent">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Pack Vermut Calent</h3>
+                        <span class="menu-item-price">24,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Pack complet que inclou 2 begudes, una ració calenta de les nostres braves, una ració de torreznos cruixents i la tapeta especial del dia.</p>
+                </div>
+
+                <!-- INFANTIL -->
+                <div class="menu-item-card" data-category="infantil" id="item-infantil-burger">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Hamburguesa infantil amb patates</h3>
+                        <span class="menu-item-price">8,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Hamburguesa de vedella de 100g fàcil de menjar, amb formatge cheddar fos, bacó cruixent i patates fregides.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="infantil" id="item-infantil-croquetes">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Croquetes amb patates</h3>
+                        <span class="menu-item-price">7,00 €</span>
+                    </div>
+                    <p class="menu-item-desc">Tres croquetes súper cremoses de pollastre casolà acompanyades de patates fregides.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="infantil" id="item-infantil-fingers">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Fingers de pollastre amb patates</h3>
+                        <span class="menu-item-price">8,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Tires de pit de pollastre arrebossades ben cruixents, servides amb patates rodones i tomàquet.</p>
+                </div>
+
+                <div class="menu-item-card" data-category="infantil" id="item-infantil-pit">
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-title">Pit de pollastre planxa amb patates</h3>
+                        <span class="menu-item-price">7,50 €</span>
+                    </div>
+                    <p class="menu-item-desc">Filet de pit de pollastre tendre cuinat a la planxa, acompanyat de patates casolanes.</p>
+                    <div class="menu-item-meta">
+                        <span class="diet-badge gf">Sense gluten</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         GALERIA DE FOTOS (INSTAGRAM INSPIRED)
+         ========================================== -->
+    <section class="galeria-section" id="galeria">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Així ens veiem</span>
+                <h2 class="section-title">La Galeria</h2>
+            </div>
+            
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Foto 1: Vermut Fred -->
+                <div class="gallery-item" data-image="assets/galeria-vermut-fred.jpg" id="gal-vermut">
+                    <img src="assets/galeria-vermut-fred.jpg" alt="Pack Vermut Fred de la casa" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-icon">🍹</span>
+                        <h4 class="gallery-overlay-text">Pack Vermut Fred</h4>
+                    </div>
+                </div>
+                
+                <!-- Foto 2: Brioche Salmo -->
+                <div class="gallery-item" data-image="assets/galeria-brioche.jpg" id="gal-brioche">
+                    <img src="assets/galeria-brioche.jpg" alt="Brioix de tàrtar de salmó detall" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-icon">🥖</span>
+                        <h4 class="gallery-overlay-text">Brioix de Salmó</h4>
+                    </div>
+                </div>
+                
+                <!-- Foto 3: Darrere la barra -->
+                <div class="gallery-item" data-image="assets/galeria-barra.jpg" id="gal-barra">
+                    <img src="assets/galeria-barra.jpg" alt="Equip de La Pelleria darrere la barra" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-icon">☕</span>
+                        <h4 class="gallery-overlay-text">Darrere la Barra</h4>
+                    </div>
+                </div>
+                
+                <!-- Foto 4: Gambes & Zamburinyes -->
+                <div class="gallery-item" data-image="assets/galeria-gambes-zamburinyes.jpg" id="gal-gambes">
+                    <img src="assets/galeria-gambes-zamburinyes.jpg" alt="Gambes a l'allet i zamburinyes graella" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-overlay-icon">🍤</span>
+                        <h4 class="gallery-overlay-text">Gambes i Zamburinyes</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACTE, HORARI I RESERVES
+         ========================================== -->
+    <section class="reserves-section" id="contacte">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">T'esperem amb els braços oberts</span>
+                <h2 class="section-title">On som & Reserves</h2>
+            </div>
+            
+            <div class="reserves-grid">
+                
+                <!-- Formulari interactiu de reserves -->
+                <div class="booking-card" id="reserva-form-section">
+                    <h3 class="booking-card-title">Reserva la teva taula</h3>
+                    <form class="booking-form" id="booking-form">
+                        <div class="form-group">
+                            <label for="booking-name" class="form-label">Nom complet *</label>
+                            <input type="text" id="booking-name" class="form-input" placeholder="El vostre nom" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="booking-phone" class="form-label">Telèfon de contacte *</label>
+                            <input type="tel" id="booking-phone" class="form-input" placeholder="Ex: 600 000 000" required>
+                        </div>
+                        
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="booking-date" class="form-label">Data de la reserva *</label>
+                                <input type="date" id="booking-date" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="booking-time" class="form-label">Hora *</label>
+                                <input type="time" id="booking-time" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="booking-guests" class="form-label">Nombre de comensals *</label>
+                            <input type="number" id="booking-guests" class="form-input" min="1" max="25" placeholder="Ex: 4" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="booking-message" class="form-label">Comentaris / Al·lèrgies</label>
+                            <textarea id="booking-message" class="form-input" rows="4" placeholder="Indica'ns si tens alguna al·lèrgia, si necessites trona per a nadó, etc."></textarea>
+                        </div>
+                        
+                        <p class="form-info-note">* En enviar la petició, el nostre equip comprovarà la disponibilitat de taules i us confirmarà la reserva per telèfon.</p>
+                        
+                        <button type="submit" class="btn btn-primary" id="btn-submit-reserva">Enviar petició de reserva</button>
+                    </form>
+                </div>
+                
+                <!-- Informació de contacte, horari i Google Maps -->
+                <div class="info-column">
+                    <!-- Horari detallat -->
+                    <div class="info-block" id="horaris-taula-block">
+                        <h3 class="info-block-title">Els nostres Horaris</h3>
+                        <table class="hours-table">
+                            <tbody>
+                                <tr>
+                                    <td>Dilluns i Dimarts</td>
+                                    <td>08:00h – 16:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>Dimecres a Divendres</td>
+                                    <td>08:00h – 23:00h</td>
+                                </tr>
+                                <tr>
+                                    <td>Dissabte i Diumenge</td>
+                                    <td>10:00h – 23:00h</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Dades de contacte directes -->
+                    <div class="info-block" id="dades-contacte-block">
+                        <h3 class="info-block-title">Dades de Contacte</h3>
+                        <ul class="contact-details">
+                            <li class="contact-item">
+                                <div class="contact-icon-wrapper">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                </div>
+                                <div class="contact-content">
+                                    <h5>Adreça física</h5>
+                                    <p>Plaça de la República, 3<br>(Carrer d'Homs, 32)<br>08140 Caldes de Montbui, Barcelona</p>
+                                </div>
+                            </li>
+                            
+                            <li class="contact-item">
+                                <div class="contact-icon-wrapper">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                </div>
+                                <div class="contact-content">
+                                    <h5>Telèfon de reserves</h5>
+                                    <p><a href="tel:660732637">660 73 26 37</a></p>
+                                </div>
+                            </li>
+                            
+                            <li class="contact-item">
+                                <div class="contact-icon-wrapper">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                </div>
+                                <div class="contact-content">
+                                    <h5>Instagram</h5>
+                                    <p><a href="https://www.instagram.com/lapelleria" target="_blank">@lapelleria</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Mapa de Google Maps del local real -->
+                    <div class="info-block" id="mapa-block">
+                        <h3 class="info-block-title">Com arribar</h3>
+                        <div class="map-container">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2983.993683070448!2d2.1643916766023307!3d41.63426747124976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4c58dfbf45931%3A0xa59f71c4c1a2bd1a!2sPl.%20de%20la%20Rep%C3%BAblica%2C%203%2C%2008140%20Caldes%20de%20Montbui%2C%20Barcelona!5e0!3m2!1sca!2ses!4v1717348000000!5m2!1sca!2ses" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         LIGHTBOX DE LA GALERIA
+         ========================================== -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Tancar imatge">&times;</button>
+            <img src="" alt="" id="lightbox-img">
+        </div>
+    </div>
+
+    <!-- ==========================================
+         TOAST DE NOTIFICACIONS DE LA RESERVA
+         ========================================== -->
+    <div class="toast" id="toast">
+        <span id="toast-icon">✅</span>
+        <span id="toast-message">Reserva sol·licitada correctament!</span>
+    </div>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <img src="assets/logo.jpg" alt="La Pelleria" class="footer-logo" id="footer-logo-img">
+            <span class="footer-tagline" id="footer-tagline-quote">La Pelleria, com a casa.</span>
+            
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/lapelleria" target="_blank" class="social-link" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="tel:660732637" class="social-link" aria-label="Trucar">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 La Pelleria - Caldes de Montbui. Tots els drets reservats. Fet amb <span>🖤</span> per a la bona gent.</p>
+        </div>
+    </footer>
+
+    <!-- Script de lògica -->
+    <script src="script.js"></script>
+</body>
+</html>
