@@ -66,22 +66,24 @@ document.addEventListener('DOMContentLoaded', () => {
             let nextOpeningText = "";
             let todaysHoursText = "";
 
+            const t = translations[currentLanguage];
+
             // Definim l'horari en minuts des de mitjanit:
             // Dilluns (1) i Dimarts (2): 8:00 a 16:00 (480 min a 960 min)
             // Dimecres (3), Dijous (4), Divendres (5): 8:00 a 23:00 (480 min a 1380 min)
             // Dissabte (6), Diumenge (0): 10:00 a 23:00 (600 min a 1380 min)
             const schedules = {
-                1: { name: "dilluns", start: 8 * 60, end: 16 * 60, str: "08:00h – 16:00h" },
-                2: { name: "dimarts", start: 8 * 60, end: 16 * 60, str: "08:00h – 16:00h" },
-                3: { name: "dimecres", start: 8 * 60, end: 23 * 60, str: "08:00h – 23:00h" },
-                4: { name: "dijous", start: 8 * 60, end: 23 * 60, str: "08:00h – 23:00h" },
-                5: { name: "divendres", start: 8 * 60, end: 23 * 60, str: "08:00h – 23:00h" },
-                6: { name: "dissabte", start: 10 * 60, end: 23 * 60, str: "10:00h – 23:00h" },
-                0: { name: "diumenge", start: 10 * 60, end: 23 * 60, str: "10:00h – 23:00h" }
+                1: { name: t.day_1, start: 8 * 60, end: 16 * 60, str: "08:00h – 16:00h" },
+                2: { name: t.day_2, start: 8 * 60, end: 16 * 60, str: "08:00h – 16:00h" },
+                3: { name: t.day_3, start: 8 * 60, end: 23 * 60, str: "08:00h – 23:00h" },
+                4: { name: t.day_4, start: 8 * 60, end: 23 * 60, str: "08:00h – 23:00h" },
+                5: { name: t.day_5, start: 8 * 60, end: 23 * 60, str: "08:00h – 23:00h" },
+                6: { name: t.day_6, start: 10 * 60, end: 23 * 60, str: "10:00h – 23:00h" },
+                0: { name: t.day_0, start: 10 * 60, end: 23 * 60, str: "10:00h – 23:00h" }
             };
             
             const todaySched = schedules[day];
-            todaysHoursText = `Avui (${todaySched.name}): ${todaySched.str}`;
+            todaysHoursText = `${t.status_today} (${todaySched.name}): ${todaySched.str}`;
             
             // Comprovar si està en rang
             if (currentTimeVal >= todaySched.start && currentTimeVal < todaySched.end) {
@@ -106,12 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         
                         let dayName = "";
                         if (daysToSearch === 1) {
-                            dayName = "demà";
+                            dayName = t.status_tomorrow;
                         } else {
-                            dayName = `el proper ${nextSched.name}`;
+                            dayName = `${t.status_opening_next} ${nextSched.name}`;
                         }
                         
-                        nextOpeningText = `obrim ${dayName} a les ${startHour}:${startMinStr}h`;
+                        if (daysToSearch === 1) {
+                            nextOpeningText = `${t.status_opening_tomorrow} ${dayName} a les ${startHour}:${startMinStr}h`;
+                        } else {
+                            nextOpeningText = `${dayName} a les ${startHour}:${startMinStr}h`;
+                        }
                         foundNext = true;
                     }
                     daysToSearch++;
@@ -120,10 +126,10 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (isOpen) {
                 statusDot.className = "status-dot open";
-                statusText.innerHTML = `<span style="color:#2e7d32; font-weight:700;">● OBERT ARA</span> – Vine a gaudir de la carta! Tanquem a les ${closingTime}`;
+                statusText.innerHTML = `<span style="color:#2e7d32; font-weight:700;">● ${t.status_open}</span> – ${t.status_enjoy} ${t.status_closing_at} ${closingTime}`;
             } else {
                 statusDot.className = "status-dot closed";
-                statusText.innerHTML = `<span style="color:var(--accent-red); font-weight:700;">● TANCAT ARA</span> – ${nextOpeningText}`;
+                statusText.innerHTML = `<span style="color:var(--accent-red); font-weight:700;">● ${t.status_closed}</span> – ${nextOpeningText}`;
             }
             statusHoursText.textContent = todaysHoursText;
 
@@ -134,13 +140,70 @@ document.addEventListener('DOMContentLoaded', () => {
             statusHoursText.textContent = "Consulta els horaris a la secció inferior.";
         }
     }
+
+    // ==========================================
+    // 3. GESTIÓ DEL SUPORT MULTI-IDIOMA (I18N)
+    // ==========================================
+    let currentLanguage = 'ca'; // Idioma per defecte
     
-    updateStatusWidget();
+    function changeLanguage(lang) {
+        currentLanguage = lang;
+        localStorage.setItem('preferredLanguage', lang);
+        
+        // Actualitzar atribut de l'idioma a l'etiqueta html
+        document.documentElement.setAttribute('lang', lang);
+        
+        // Actualitzar botons de la capçalera
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            if (btn.getAttribute('data-lang') === lang) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+        
+        // Aplicar traduccions a la pàgina
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (translations[lang] && translations[lang][key]) {
+                el.innerHTML = translations[lang][key];
+            }
+        });
+        
+        // Aplicar traduccions a placeholders
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if (translations[lang] && translations[lang][key]) {
+                el.setAttribute('placeholder', translations[lang][key]);
+            }
+        });
+        
+        // Recalcular widget d'estat dinàmic amb la traducció activa
+        updateStatusWidget();
+    }
+    
+    // Escoltador d'esdeveniments per als botons de canvi d'idioma
+    const langButtons = document.querySelectorAll('.lang-btn');
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            changeLanguage(lang);
+        });
+    });
+    
+    // Inicialització de l'idioma preferit
+    const savedLang = localStorage.getItem('preferredLanguage');
+    const browserLang = navigator.language.substring(0, 2);
+    const defaultLang = ['ca', 'es', 'en'].includes(browserLang) ? browserLang : 'ca';
+    const initialLang = savedLang || defaultLang;
+    
+    changeLanguage(initialLang);
+    
     // Actualitzar cada minut per a màxima precisió
     setInterval(updateStatusWidget, 60000);
 
     // ==========================================
-    // 3. FILTRE DE LA CARTA (INTERACTIU)
+    // 4. FILTRE DE LA CARTA (INTERACTIU)
     // ==========================================
     const filterButtons = document.querySelectorAll('.filter-btn');
     const menuItems = document.querySelectorAll('.menu-item-card');
@@ -176,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 4. GALERIA LIGHTBOX
+    // 5. GALERIA LIGHTBOX
     // ==========================================
     const galleryItems = document.querySelectorAll('.gallery-item');
     const lightbox = document.getElementById('lightbox');
@@ -222,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 5. FORMULARI DE RESERVA I TOASTS
+    // 6. FORMULARI DE RESERVA I TOASTS (IDIOMA ADAPTAT)
     // ==========================================
     const bookingForm = document.getElementById('booking-form');
     const toast = document.getElementById('toast');
@@ -247,17 +310,30 @@ document.addEventListener('DOMContentLoaded', () => {
             const date = document.getElementById('booking-date').value;
             const guests = document.getElementById('booking-guests').value;
             
-            // Format de data més bonic en català
+            // Format de data més bonic i traduït
             let dateFormatted = date;
             try {
                 const d = new Date(date);
-                dateFormatted = d.toLocaleDateString('ca-ES', { day: 'numeric', month: 'long' });
+                const localeStr = currentLanguage === 'ca' ? 'ca-ES' : (currentLanguage === 'es' ? 'es-ES' : 'en-US');
+                dateFormatted = d.toLocaleDateString(localeStr, { day: 'numeric', month: 'long' });
             } catch (err) {}
+            
+            // Obtenir textos del botó segons idioma actiu
+            let processingText = "Processant la teva reserva...";
+            let originalSubmitText = "Enviar petició de reserva";
+            
+            if (currentLanguage === 'es') {
+                processingText = "Procesando tu reserva...";
+                originalSubmitText = "Enviar petición de reserva";
+            } else if (currentLanguage === 'en') {
+                processingText = "Processing your reservation...";
+                originalSubmitText = "Send booking request";
+            }
             
             // Canviar botó a estat de càrrega
             if (submitBtn) {
                 submitBtn.disabled = true;
-                submitBtn.textContent = 'Processant la teva reserva...';
+                submitBtn.textContent = processingText;
             }
             
             // Simulació d'enviament (1.5 segons)
@@ -265,12 +341,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Restablir botó
                 if (submitBtn) {
                     submitBtn.disabled = false;
-                    submitBtn.textContent = 'Enviar petició de reserva';
+                    submitBtn.textContent = originalSubmitText;
                 }
                 
-                // Mostrar toast exitós
+                // Mostrar toast exitós en l'idioma actiu
                 toastIcon.textContent = '✅';
-                toastMessage.innerHTML = `<strong>Gràcies ${name}!</strong> Petició per a ${guests} pers. el ${dateFormatted} rebuda. Trucarem al ${phone} per confirmar.`;
+                
+                let successMessage = "";
+                if (currentLanguage === 'ca') {
+                    successMessage = `<strong>Gràcies ${name}!</strong> Petició per a ${guests} pers. el ${dateFormatted} rebuda. Trucarem al ${phone} per confirmar.`;
+                } else if (currentLanguage === 'es') {
+                    successMessage = `<strong>¡Gracias ${name}!</strong> Petición para ${guests} pers. el ${dateFormatted} recibida. Llamaremos al ${phone} para confirmar.`;
+                } else if (currentLanguage === 'en') {
+                    successMessage = `<strong>Thank you ${name}!</strong> Request for ${guests} guests on ${dateFormatted} received. We will call ${phone} to confirm.`;
+                }
+                
+                toastMessage.innerHTML = successMessage;
                 toast.className = 'toast show toast-success';
                 
                 // Netejar formulari
@@ -290,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 6. ENLLAÇOS DE NAVEGACIÓ ACTIUS (SCROLL)
+    // 7. ENLLAÇOS DE NAVEGACIÓ ACTIUS (SCROLL)
     // ==========================================
     const sections = document.querySelectorAll('section');
     

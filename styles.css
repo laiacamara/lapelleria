@@ -262,6 +262,49 @@ a {
     cursor: pointer;
 }
 
+/* Selector d'idioma en la capçalera */
+.lang-selector {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted-light);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    padding: 4px 6px;
+}
+
+.lang-btn:hover {
+    color: var(--text-light);
+}
+
+.lang-btn.active {
+    color: var(--accent-gold);
+    text-shadow: 0 0 10px rgba(197, 155, 39, 0.2);
+}
+
+.lang-separator {
+    color: rgba(232, 216, 200, 0.25);
+    font-size: 0.8rem;
+    user-select: none;
+}
+
+.lang-selector-mobile {
+    display: none;
+}
+
+.lang-selector-desktop {
+    display: flex;
+}
+
 /* ==========================================
    HERO SECTION
    ========================================== */
@@ -1184,6 +1227,22 @@ a {
 /* ==========================================
    RESPONSIVITAT (MEDIA QUERIES)
    ========================================== */
+@media (max-width: 1200px) and (min-width: 769px) {
+    .status-bar {
+        padding: 12px 24px;
+        gap: 16px;
+    }
+    .status-text {
+        font-size: 0.95rem;
+    }
+    .status-hours, .status-contact-quick {
+        font-size: 0.85rem;
+    }
+    .status-contact-quick {
+        gap: 16px;
+    }
+}
+
 @media (max-width: 992px) {
     .reserves-grid {
         grid-template-columns: 1fr;
@@ -1229,6 +1288,24 @@ a {
         flex-direction: column;
         gap: 8px;
         width: 100%;
+    }
+    
+    .lang-selector-desktop {
+        display: none;
+    }
+    
+    .lang-selector-mobile {
+        display: block;
+        margin: 8px 0;
+    }
+    
+    .lang-selector-mobile .lang-btn {
+        font-size: 1.1rem;
+        padding: 8px 12px;
+    }
+    
+    .lang-selector-mobile .lang-separator {
+        font-size: 1rem;
     }
     
     .nav-toggle {
