@@ -5,6 +5,7 @@ const translations = {
         nav_weekly: "Menú Setmanal",
         nav_carta: "La Carta",
         nav_gallery: "Galeria",
+        nav_opinions: "Opinions",
         nav_contact: "On som & Reserves",
         nav_book_btn: "Reservar",
 
@@ -242,6 +243,14 @@ const translations = {
         gallery_barra: "Darrere la Barra",
         gallery_gambes: "Gambes i Zamburinyes",
 
+        // Opinions
+        opinions_subtitle: "Què diuen de nosaltres",
+        opinions_title: "Opinions dels nostres clients",
+        review_1_text: "«Les millors braves i el brioix de salmó és espectacular. L'ambient és acollidor i el servei excel·lent.»",
+        review_2_text: "«Un descobriment increïble al centre de Caldes. El vermut fred és una delícia i les tapes són súper casolanes. Tornarem segur!»",
+        review_3_text: "«Un lloc molt acollidor amb personal amable i menjar local increïble. La coca de pulled pork és imprescindible. Molt recomanable!»",
+        opinions_cta_btn: "Deixa la teva opinió a Google",
+
         // Reserves
         reserves_subtitle: "T'esperem amb els braços oberts",
         reserves_title: "On som & Reserves",
@@ -285,6 +294,7 @@ const translations = {
         nav_weekly: "Menú Semanal",
         nav_carta: "La Carta",
         nav_gallery: "Galería",
+        nav_opinions: "Opiniones",
         nav_contact: "Dónde estamos & Reservas",
         nav_book_btn: "Reservar",
 
@@ -522,6 +532,14 @@ const translations = {
         gallery_barra: "Detrás de la Barra",
         gallery_gambes: "Gambas y Zamburiñas",
 
+        // Opinions
+        opinions_subtitle: "Qué dicen de nosotros",
+        opinions_title: "La opinión de nuestros clientes",
+        review_1_text: "«Las mejores bravas y el brioche de salmón es espectacular. El ambiente es acogedor y el servicio excelente.»",
+        review_2_text: "«Un descubrimiento increíble en el centro de Caldes. El vermut frío es una delicia y las tapas son súper caseras. ¡Volveremos seguro!»",
+        review_3_text: "«Un lugar muy acogedor con personal amable y comida local increíble. La coca de pulled pork es imprescindible. ¡Muy recomendable!»",
+        opinions_cta_btn: "Deja tu opinión en Google",
+
         // Reserves
         reserves_subtitle: "Te esperamos con los brazos abiertos",
         reserves_title: "Dónde estamos & Reservas",
@@ -565,6 +583,7 @@ const translations = {
         nav_weekly: "Weekly Menu",
         nav_carta: "The Menu",
         nav_gallery: "Gallery",
+        nav_opinions: "Reviews",
         nav_contact: "Find Us & Book",
         nav_book_btn: "Book Table",
 
@@ -801,6 +820,14 @@ const translations = {
         gallery_brioche: "Salmon Brioche",
         gallery_barra: "Behind the Bar",
         gallery_gambes: "Shrimp and Scallops",
+
+        // Opinions
+        opinions_subtitle: "What they say about us",
+        opinions_title: "Our customers' opinions",
+        review_1_text: "“The best bravas and the salmon brioche is spectacular. The atmosphere is cozy and the service is excellent.”",
+        review_2_text: "“An incredible discovery in the center of Caldes. The cold vermouth is a delight and the tapas are super homemade. We will definitely be back!”",
+        review_3_text: "“A cozy place with friendly staff and amazing local food. The pulled pork flatbread is a must-try. Highly recommended!”",
+        opinions_cta_btn: "Leave your review on Google",
 
         // Reserves
         reserves_subtitle: "We welcome you with open arms",

@@ -1225,6 +1225,109 @@ a {
 }
 
 /* ==========================================
+   SECCIÓ D'OPINIONS (TESTIMONIS)
+   ========================================== */
+.opinions-section {
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.opinions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.opinion-card {
+    background-color: var(--text-light);
+    border-radius: var(--border-radius-lg);
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition-smooth);
+}
+
+.opinion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-gold);
+}
+
+.opinion-stars {
+    color: var(--accent-gold);
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+
+.opinion-text {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--primary-dark);
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.opinion-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.opinion-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-mid);
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid var(--border-light);
+}
+
+.opinion-name {
+    font-family: var(--font-title);
+    font-weight: 600;
+    color: var(--primary-dark);
+    font-size: 0.95rem;
+}
+
+.opinions-cta-container {
+    text-align: center;
+}
+
+#btn-google-reviews {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    font-size: 1rem;
+}
+
+.google-logo {
+    background-color: white;
+    color: #4285F4;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.85rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+/* ==========================================
    RESPONSIVITAT (MEDIA QUERIES)
    ========================================== */
 @media (max-width: 1200px) and (min-width: 769px) {
@@ -1264,6 +1367,11 @@ a {
     
     .featured-img-container {
         height: 200px;
+    }
+    
+    .opinions-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
     }
 }
 
@@ -1387,5 +1495,10 @@ a {
     
     .form-group-row {
         grid-template-columns: 1fr;
+    }
+    
+    .opinions-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
