@@ -47,24 +47,6 @@ const translations = {
         weekly_half_menu: "Opció de mig menú: <strong>11€</strong>",
         weekly_sencer: "Sencer",
 
-        // Plats Menú Setmanal
-        weekly_item_p1: "Amanida verda de temporada",
-        weekly_item_p2: "Sopa freda de meló refrescant",
-        weekly_item_p3: "Caneló tradicional d'espinacs de l'hort",
-        weekly_item_p4: "Cruixent \"Torta de camarón\" estil gadità",
-        weekly_item_p5: "Empedrat català amb tonyina i ou dur",
-        
-        weekly_item_s1: "Pop a la gallega amb parmentier de patata",
-        weekly_item_s2: "Mandonguilles de la iaia guisades amb salsa",
-        weekly_item_s3: "Fingers de vedella cruixents amb patates fregides",
-        weekly_item_s4: "Cansalada a baixa temperatura amb ou i patates",
-        weekly_item_s5: "Verat fresc a la planxa amb all i julivert",
-        
-        weekly_item_d1: "Síndria ben dolça i fresca",
-        weekly_item_d2: "Mel i mató artesà local",
-        weekly_item_d3: "Crema catalana casolana cremada",
-        weekly_item_d4: "Maduixes fresques amb nata muntada",
-
         // La Carta
         carta_subtitle: "Tria, comparteix i gaudeix",
         carta_title: "La Nostra Carta",
@@ -336,24 +318,6 @@ const translations = {
         weekly_half_menu: "Opción de medio menú: <strong>11€</strong>",
         weekly_sencer: "Entero",
 
-        // Platos Menú Semanal
-        weekly_item_p1: "Ensalada verde de temporada",
-        weekly_item_p2: "Sopa fría de melón refrescante",
-        weekly_item_p3: "Canelón tradicional de espinacas del huerto",
-        weekly_item_p4: "Crujiente \"Torta de camarón\" estilo gaditano",
-        weekly_item_p5: "Empedrado catalán con atún y huevo duro",
-        
-        weekly_item_s1: "Pulpo a la gallega con parmentier de patata",
-        weekly_item_s2: "Albóndigas de la abuela guisadas en salsa",
-        weekly_item_s3: "Fingers de ternera crujientes con patatas fritas",
-        weekly_item_s4: "Panceta a baja temperatura con huevo y patatas",
-        weekly_item_s5: "Caballa fresca a la plancha con ajo y perejil",
-        
-        weekly_item_d1: "Sandía muy dulce y fresca",
-        weekly_item_d2: "Miel y requesón (\"mató\") artesano local",
-        weekly_item_d3: "Crema catalana casera quemada",
-        weekly_item_d4: "Fresas frescas con nata montada",
-
         // La Carta
         carta_subtitle: "Elige, comparte y disfruta",
         carta_title: "Nuestra Carta",
@@ -624,24 +588,6 @@ const translations = {
         weekly_postres: "Desserts",
         weekly_half_menu: "Half-menu option: <strong>11€</strong>",
         weekly_sencer: "Full",
-
-        // Weekly Menu Items
-        weekly_item_p1: "Seasonal green salad",
-        weekly_item_p2: "Refreshing cold melon soup",
-        weekly_item_p3: "Traditional spinach cannelloni from the orchard",
-        weekly_item_p4: "Crispy Cadiz-style shrimp fritter (\"Torta de camarón\")",
-        weekly_item_p5: "Traditional Catalan bean salad with tuna and hard-boiled egg",
-        
-        weekly_item_s1: "Galician-style octopus with potato parmentier",
-        weekly_item_s2: "Grandma's stewed meatballs in sauce",
-        weekly_item_s3: "Crispy beef fingers with French fries",
-        weekly_item_s4: "Low-temperature pork belly with egg and potatoes",
-        weekly_item_s5: "Fresh grilled mackerel with garlic and parsley",
-        
-        weekly_item_d1: "Sweet and fresh watermelon",
-        weekly_item_d2: "Local honey and fresh whey cheese (\"mató\")",
-        weekly_item_d3: "Burnt homemade Catalan cream",
-        weekly_item_d4: "Fresh strawberries with whipped cream",
 
         // The Menu (Carta)
         carta_subtitle: "Choose, share and enjoy",

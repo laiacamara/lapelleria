@@ -1,0 +1,70 @@
+{
+  "price": "14€",
+  "half_price": "11€",
+  "ca": {
+    "primers": [
+      "Amanida verda de temporada",
+      "Sopa freda de meló refrescant",
+      "Caneló tradicional d'espinacs de l'hort",
+      "Cruixent \"Torta de camarón\" estil gadità",
+      "Empedrat català amb tonyina i ou dur"
+    ],
+    "segons": [
+      "Pop a la gallega amb parmentier de patata",
+      "Mandonguilles de la iaia guisades amb salsa",
+      "Fingers de vedella cruixents amb patates fregides",
+      "Cansalada a baixa temperatura amb ou i patates",
+      "Verat fresc a la planxa amb all i julivert"
+    ],
+    "postres": [
+      "Síndria ben dolça i fresca",
+      "Mel i mató artesà local",
+      "Crema catalana casolana cremada",
+      "Maduixes fresques amb nata muntada"
+    ]
+  },
+  "es": {
+    "primers": [
+      "Ensalada verde de temporada",
+      "Sopa fría de melón refrescante",
+      "Canelón tradicional de espinacas del huerto",
+      "Crujiente \"Torta de camarón\" estilo gaditano",
+      "Empedrado catalán con atún y huevo duro"
+    ],
+    "segons": [
+      "Pulpo a la gallega con parmentier de patata",
+      "Albóndigas de la abuela guisadas en salsa",
+      "Fingers de ternera crujientes con patatas fritas",
+      "Panceta a baja temperatura con huevo y patatas",
+      "Caballa fresca a la plancha con ajo y perejil"
+    ],
+    "postres": [
+      "Sandía muy dulce y fresca",
+      "Miel y requesón (\"mató\") artesano local",
+      "Crema catalana casera quemada",
+      "Fresas frescas con nata montada"
+    ]
+  },
+  "en": {
+    "primers": [
+      "Seasonal green salad",
+      "Refreshing cold melon soup",
+      "Traditional spinach cannelloni from the orchard",
+      "Crispy Cadiz-style shrimp fritter (\"Torta de camarón\")",
+      "Traditional Catalan bean salad with tuna and hard-boiled egg"
+    ],
+    "segons": [
+      "Galician-style octopus with potato parmentier",
+      "Grandma's stewed meatballs in sauce",
+      "Crispy beef fingers with French fries",
+      "Low-temperature pork belly with egg and potatoes",
+      "Fresh grilled mackerel with garlic and parsley"
+    ],
+    "postres": [
+      "Sweet and fresh watermelon",
+      "Local honey and fresh whey cheese (\"mató\")",
+      "Burnt homemade Catalan cream",
+      "Fresh strawberries with whipped cream"
+    ]
+  }
+}

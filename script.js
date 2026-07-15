@@ -1,5 +1,55 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    // Variable per emmagatzemar les dades del menú setmanal
+    let weeklyMenuData = null;
+    
+    // Funció per a renderitzar el menú setmanal dinàmicament
+    function renderWeeklyMenu(lang) {
+        if (!weeklyMenuData) return;
+        
+        // Actualitzar preu del menú sencer
+        const priceBadge = document.querySelector('#board-price-badge span:first-child');
+        if (priceBadge) {
+            priceBadge.textContent = weeklyMenuData.price || "14€";
+        }
+        
+        // Actualitzar preu de mig menú
+        const halfPriceStrong = document.querySelector('#half-menu-price-text strong');
+        if (halfPriceStrong) {
+            halfPriceStrong.textContent = weeklyMenuData.half_price || "11€";
+        }
+        
+        // Renderitzar plats per categories
+        const categories = ['primers', 'segons', 'postres'];
+        categories.forEach(category => {
+            const listContainer = document.querySelector(`#course-${category} .course-list`);
+            if (listContainer) {
+                listContainer.innerHTML = ''; // Netejar fallback estàtic de l'HTML
+                const items = weeklyMenuData[lang] && weeklyMenuData[lang][category] ? weeklyMenuData[lang][category] : [];
+                items.forEach(itemText => {
+                    const li = document.createElement('li');
+                    li.className = 'course-item';
+                    li.textContent = itemText;
+                    listContainer.appendChild(li);
+                });
+            }
+        });
+    }
+
+    // Carregar dades del menú setmanal de forma asíncrona
+    fetch('menu.json')
+        .then(response => {
+            if (!response.ok) throw new Error("No s'ha pogut carregar el fitxer menu.json");
+            return response.json();
+        })
+        .then(data => {
+            weeklyMenuData = data;
+            renderWeeklyMenu(currentLanguage);
+        })
+        .catch(err => {
+            console.error("Error carregant el menú setmanal:", err);
+        });
+
     // ==========================================
     // 1. CAPÇALERA I MENÚ MÒBIL
     // ==========================================
@@ -180,6 +230,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Recalcular widget d'estat dinàmic amb la traducció activa
         updateStatusWidget();
+        
+        // Actualitzar la renderització del menú setmanal dinàmic
+        renderWeeklyMenu(lang);
     }
     
     // Escoltador d'esdeveniments per als botons de canvi d'idioma

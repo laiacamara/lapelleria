@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets"
+public_folder: "/assets"
+
+collections:
+  - name: "weekly_menu"
+    label: "Menú Setmanal"
+    files:
+      - file: "menu.json"
+        label: "Dades del Menú"
+        name: "menu"
+        fields:
+          - { label: "Preu Menú Sencer", name: "price", widget: "string", default: "14€" }
+          - { label: "Preu Mig Menú", name: "half_price", widget: "string", default: "11€" }
+          
+          - label: "Traducció Català"
+            name: "ca"
+            widget: "object"
+            fields:
+              - { label: "Primers", name: "primers", widget: "list", field: { name: "value", widget: "string", label: "Plat" } }
+              - { label: "Segons", name: "segons", widget: "list", field: { name: "value", widget: "string", label: "Plat" } }
+              - { label: "Postres", name: "postres", widget: "list", field: { name: "value", widget: "string", label: "Plat" } }
+
+          - label: "Traducció Castellà"
+            name: "es"
+            widget: "object"
+            fields:
+              - { label: "Primers", name: "primers", widget: "list", field: { name: "value", widget: "string", label: "Plat" } }
+              - { label: "Segons", name: "segons", widget: "list", field: { name: "value", widget: "string", label: "Plat" } }
+              - { label: "Postres", name: "postres", widget: "list", field: { name: "value", widget: "string", label: "Plat" } }
+
+          - label: "Traducció Anglès"
+            name: "en"
+            widget: "object"
+            fields:
+              - { label: "Primers", name: "primers", widget: "list", field: { name: "value", widget: "string", label: "Plat" } }
+              - { label: "Segons", name: "segons", widget: "list", field: { name: "value", widget: "string", label: "Plat" } }
+              - { label: "Postres", name: "postres", widget: "list", field: { name: "value", widget: "string", label: "Plat" } }
