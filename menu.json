@@ -3,24 +3,21 @@
   "half_price": "11€",
   "ca": {
     "primers": [
-      "Amanida verda de temporada",
-      "Sopa freda de meló refrescant",
-      "Caneló tradicional d'espinacs de l'hort",
-      "Cruixent \"Torta de camarón\" estil gadità",
-      "Empedrat català amb tonyina i ou dur"
+      "Amanida de tomàquets, tonyina i ou dur",
+      "Gaspatxo de meló",
+      "Espagetis a la carbonara",
+      "Remenat de bolets i espàrrecs"
     ],
     "segons": [
-      "Pop a la gallega amb parmentier de patata",
-      "Mandonguilles de la iaia guisades amb salsa",
-      "Fingers de vedella cruixents amb patates fregides",
-      "Cansalada a baixa temperatura amb ou i patates",
-      "Verat fresc a la planxa amb all i julivert"
+      "Maires a l'andalusa",
+      "Broixetes de pollastre",
+      "Butifarra enmascarada",
+      "Croquetes de verdures amb formatge de cabra "
     ],
     "postres": [
-      "Síndria ben dolça i fresca",
-      "Mel i mató artesà local",
-      "Crema catalana casolana cremada",
-      "Maduixes fresques amb nata muntada"
+      "Pastís de formatge",
+      "Tarta Santiago",
+      "Yogurt amb polç de Lotus"
     ]
   },
   "es": {
