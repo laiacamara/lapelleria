@@ -413,45 +413,51 @@ document.addEventListener('DOMContentLoaded', () => {
                 text += `\n*Contact phone:* ${phone}`;
             }
             
-            // Obrir WhatsApp en una pestanya nova amb retard per simular interacció
+            // Obrir WhatsApp directament (sense setTimeout) per evitar bloquejadors de popups
+            const encodedText = encodeURIComponent(text);
+            const whatsappUrl = `https://wa.me/34620390376?text=${encodedText}`;
+            
+            try {
+                const newWindow = window.open(whatsappUrl, '_blank');
+                if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+                    // Si el navegador bloqueja el popup, redirigim la pestanya actual
+                    window.location.href = whatsappUrl;
+                }
+            } catch (e) {
+                window.location.href = whatsappUrl;
+            }
+            
+            // Restablir botó
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalSubmitText;
+            }
+            
+            // Mostrar toast exitós en l'idioma actiu
+            toastIcon.textContent = '💬';
+            
+            let successMessage = "";
+            if (currentLanguage === 'ca') {
+                successMessage = `<strong>S'ha obert el WhatsApp!</strong> Envia el missatge per completar la reserva.`;
+            } else if (currentLanguage === 'es') {
+                successMessage = `<strong>¡Se ha abierto WhatsApp!</strong> Envía el mensaje para completar la reserva.`;
+            } else if (currentLanguage === 'en') {
+                successMessage = `<strong>WhatsApp opened!</strong> Send the message to complete your booking.`;
+            }
+            
+            toastMessage.innerHTML = successMessage;
+            toast.className = 'toast show toast-success';
+            
+            // Netejar formulari
+            bookingForm.reset();
+            if (dateInput) {
+                dateInput.value = '';
+            }
+            
+            // Ocultar toast després de 5 segons
             setTimeout(() => {
-                const encodedText = encodeURIComponent(text);
-                const whatsappUrl = `https://wa.me/34620390376?text=${encodedText}`;
-                window.open(whatsappUrl, '_blank');
-                
-                // Restablir botó
-                if (submitBtn) {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = originalSubmitText;
-                }
-                
-                // Mostrar toast exitós en l'idioma actiu
-                toastIcon.textContent = '💬';
-                
-                let successMessage = "";
-                if (currentLanguage === 'ca') {
-                    successMessage = `<strong>S'ha obert el WhatsApp!</strong> Envia el missatge per completar la reserva.`;
-                } else if (currentLanguage === 'es') {
-                    successMessage = `<strong>¡Se ha abierto WhatsApp!</strong> Envía el mensaje para completar la reserva.`;
-                } else if (currentLanguage === 'en') {
-                    successMessage = `<strong>WhatsApp opened!</strong> Send the message to complete your booking.`;
-                }
-                
-                toastMessage.innerHTML = successMessage;
-                toast.className = 'toast show toast-success';
-                
-                // Netejar formulari
-                bookingForm.reset();
-                if (dateInput) {
-                    dateInput.value = '';
-                }
-                
-                // Ocultar toast després de 5 segons
-                setTimeout(() => {
-                    toast.className = 'toast';
-                }, 5000);
-                
-            }, 1000);
+                toast.className = 'toast';
+            }, 5000);
         });
     }
 
