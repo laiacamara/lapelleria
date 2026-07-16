@@ -361,7 +361,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.getElementById('booking-name').value;
             const phone = document.getElementById('booking-phone').value;
             const date = document.getElementById('booking-date').value;
+            const time = document.getElementById('booking-time').value;
             const guests = document.getElementById('booking-guests').value;
+            const message = document.getElementById('booking-message').value;
             
             // Format de data més bonic i traduït
             let dateFormatted = date;
@@ -389,8 +391,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.textContent = processingText;
             }
             
-            // Simulació d'enviament (1.5 segons)
+            // Construir el missatge per a WhatsApp segons l'idioma
+            let text = "";
+            if (currentLanguage === 'ca') {
+                text = `Hola! M'agradaria fer una reserva a nom de *${name}* per al dia *${dateFormatted}* a les *${time}* per a *${guests}* persones.`;
+                if (message.trim()) {
+                    text += `\n\n*Comentaris/Al·lèrgies:* ${message}`;
+                }
+                text += `\n*Telèfon de contacte:* ${phone}`;
+            } else if (currentLanguage === 'es') {
+                text = `¡Hola! Me gustaría hacer una reserva a nombre de *${name}* para el día *${dateFormatted}* a las *${time}* para *${guests}* personas.`;
+                if (message.trim()) {
+                    text += `\n\n*Comentarios/Alergias:* ${message}`;
+                }
+                text += `\n*Teléfono de contacto:* ${phone}`;
+            } else {
+                text = `Hello! I would like to make a reservation under the name of *${name}* for *${dateFormatted}* at *${time}* for *${guests}* guests.`;
+                if (message.trim()) {
+                    text += `\n\n*Comments/Allergies:* ${message}`;
+                }
+                text += `\n*Contact phone:* ${phone}`;
+            }
+            
+            // Obrir WhatsApp en una pestanya nova amb retard per simular interacció
             setTimeout(() => {
+                const encodedText = encodeURIComponent(text);
+                const whatsappUrl = `https://wa.me/34620390376?text=${encodedText}`;
+                window.open(whatsappUrl, '_blank');
+                
                 // Restablir botó
                 if (submitBtn) {
                     submitBtn.disabled = false;
@@ -398,15 +426,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 // Mostrar toast exitós en l'idioma actiu
-                toastIcon.textContent = '✅';
+                toastIcon.textContent = '💬';
                 
                 let successMessage = "";
                 if (currentLanguage === 'ca') {
-                    successMessage = `<strong>Gràcies ${name}!</strong> Petició per a ${guests} pers. el ${dateFormatted} rebuda. Trucarem al ${phone} per confirmar.`;
+                    successMessage = `<strong>S'ha obert el WhatsApp!</strong> Envia el missatge per completar la reserva.`;
                 } else if (currentLanguage === 'es') {
-                    successMessage = `<strong>¡Gracias ${name}!</strong> Petición para ${guests} pers. el ${dateFormatted} recibida. Llamaremos al ${phone} para confirmar.`;
+                    successMessage = `<strong>¡Se ha abierto WhatsApp!</strong> Envía el mensaje para completar la reserva.`;
                 } else if (currentLanguage === 'en') {
-                    successMessage = `<strong>Thank you ${name}!</strong> Request for ${guests} guests on ${dateFormatted} received. We will call ${phone} to confirm.`;
+                    successMessage = `<strong>WhatsApp opened!</strong> Send the message to complete your booking.`;
                 }
                 
                 toastMessage.innerHTML = successMessage;
@@ -415,7 +443,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Netejar formulari
                 bookingForm.reset();
                 if (dateInput) {
-                    const today = new Date().toISOString().split('T')[0];
                     dateInput.value = '';
                 }
                 
@@ -424,7 +451,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     toast.className = 'toast';
                 }, 5000);
                 
-            }, 1500);
+            }, 1000);
         });
     }
 
