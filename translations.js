@@ -264,6 +264,7 @@ const translations = {
         contact_instagram_lbl: "Instagram",
         
         map_title: "Com arribar",
+        open_in_maps: "Obrir a Google Maps",
 
         // Footer
         footer_quote: "La Pelleria, com a casa.",
@@ -535,6 +536,7 @@ const translations = {
         contact_instagram_lbl: "Instagram",
         
         map_title: "Cómo llegar",
+        open_in_maps: "Abrir en Google Maps",
 
         // Footer
         footer_quote: "La Pelleria, como en casa.",
@@ -806,6 +808,7 @@ const translations = {
         contact_instagram_lbl: "Instagram",
         
         map_title: "How to find us",
+        open_in_maps: "Open in Google Maps",
 
         // Footer
         footer_quote: "La Pelleria, just like home.",
