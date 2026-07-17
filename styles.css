@@ -64,6 +64,7 @@ body {
 section {
     padding: 100px 24px;
     position: relative;
+    scroll-margin-top: 80px;
 }
 
 .container {
@@ -310,6 +311,7 @@ a {
    ========================================== */
 .hero {
     height: 100vh;
+    height: 100dvh;
     min-height: 650px;
     display: flex;
     align-items: center;
@@ -1403,17 +1405,34 @@ a {
     }
     
     .lang-selector-mobile {
-        display: block;
-        margin: 8px 0;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin: 16px 0 8px 0;
+        width: 100%;
     }
     
     .lang-selector-mobile .lang-btn {
-        font-size: 1.1rem;
-        padding: 8px 12px;
+        font-size: 1rem;
+        padding: 8px 16px;
+        border: 1px solid rgba(232, 216, 200, 0.2);
+        border-radius: 20px;
+        background: rgba(232, 216, 200, 0.05);
+        color: var(--text-muted-light);
+        transition: var(--transition-smooth);
+        min-width: 55px;
+        text-align: center;
+    }
+    
+    .lang-selector-mobile .lang-btn.active {
+        background: var(--accent-gold);
+        color: var(--primary-dark);
+        border-color: var(--accent-gold);
+        font-weight: bold;
     }
     
     .lang-selector-mobile .lang-separator {
-        font-size: 1rem;
+        display: none;
     }
     
     .nav-toggle {
