@@ -466,6 +466,61 @@ a {
 /* ==========================================
    AVÍS MENÚ DIARI D'ENTRE SETMANA
    ========================================== */
+.drinks-card {
+    background: #fff;
+    border-radius: var(--border-radius-md);
+    padding: 26px 28px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
+    transition: var(--transition-smooth);
+}
+
+.drinks-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.drinks-list {
+    list-style: none;
+    margin-top: 14px;
+    padding: 0;
+}
+
+.drinks-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 7px 0;
+    border-bottom: 1px dotted rgba(65, 40, 30, 0.15);
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.drinks-list li:last-child {
+    border-bottom: none;
+}
+
+.drinks-list li span {
+    padding-right: 12px;
+}
+
+.drinks-list li strong {
+    color: var(--primary-mid);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.drinks-subgroup-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-gold);
+    margin: 14px 0 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(197, 155, 39, 0.25);
+}
+
 .daily-menu-banner-section {
     padding: 50px 0 20px;
     background-color: var(--bg-light);
