@@ -57,8 +57,18 @@ const translations = {
         filter_plats: "Els Plats",
         filter_coques: "Les Coques",
         filter_entrepans: "Entrepans",
+        filter_hamburgueses: "Hamburgueses",
+        filter_postres: "Postres",
         filter_vermut: "Packs Vermut",
         filter_infantil: "Per als més petits",
+
+        // Avís Menú Diari
+        daily_menu_badge: "Dilluns a Divendres",
+        daily_menu_title: "Menú Diari d'Entre Setmana",
+        daily_menu_highlight: "No oblidis preguntar pel nostre menú setmanal!",
+        daily_menu_desc: "Als migdies d'entre setmana disposem de menú casolà variat. Pregunta al nostre equip a taula o contacta'ns per consultar els plats d'avui.",
+        daily_menu_btn: "Preguntar per WhatsApp",
+        carta_footer_note: "✨ No dubtis a preguntar pel nostre menú diari d'entre setmana!",
 
         // Etiquetes dieta
         badge_featured: "Destacat de la casa",
@@ -329,8 +339,18 @@ const translations = {
         filter_plats: "Los Platos",
         filter_coques: "Las Coques",
         filter_entrepans: "Bocadillos",
+        filter_hamburgueses: "Hamburguesas",
+        filter_postres: "Postres",
         filter_vermut: "Packs Vermut",
         filter_infantil: "Para los más pequeños",
+
+        // Aviso Menú Diario
+        daily_menu_badge: "Lunes a Viernes",
+        daily_menu_title: "Menú Diario de Entre Semana",
+        daily_menu_highlight: "¡No olvides preguntar por nuestro menú semanal!",
+        daily_menu_desc: "A los mediodías de entre semana disponemos de menú casero variado. Pregunta a nuestro equipo en mesa o contáctanos para consultar los platos de hoy.",
+        daily_menu_btn: "Preguntar por WhatsApp",
+        carta_footer_note: "✨ ¡No dudes en preguntar por nuestro menú diario de entre semana!",
 
         // Etiquetas dieta
         badge_featured: "Destacado de la casa",
@@ -601,8 +621,18 @@ const translations = {
         filter_plats: "Dishes",
         filter_coques: "Flatbreads (Coques)",
         filter_entrepans: "Sandwiches",
+        filter_hamburgueses: "Burgers",
+        filter_postres: "Desserts",
         filter_vermut: "Vermouth Packs",
         filter_infantil: "Kids Menu",
+
+        // Daily Menu Notice
+        daily_menu_badge: "Monday to Friday",
+        daily_menu_title: "Weekday Daily Menu",
+        daily_menu_highlight: "Don't forget to ask about our weekly menu!",
+        daily_menu_desc: "On weekday lunchtimes we offer a varied homemade daily menu. Ask our team at the table or contact us to check today's dishes.",
+        daily_menu_btn: "Ask via WhatsApp",
+        carta_footer_note: "✨ Don't hesitate to ask for our weekday daily menu!",
 
         // Diet badges
         badge_featured: "House Specialty",

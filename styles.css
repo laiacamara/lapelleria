@@ -464,6 +464,133 @@ a {
 }
 
 /* ==========================================
+   AVÍS MENÚ DIARI D'ENTRE SETMANA
+   ========================================== */
+.daily-menu-banner-section {
+    padding: 50px 0 20px;
+    background-color: var(--bg-light);
+}
+
+.daily-menu-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #231610 0%, #362016 100%);
+    color: var(--text-light);
+    border: 2px solid var(--accent-gold);
+    border-radius: var(--border-radius-md);
+    padding: 32px 36px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.daily-menu-card::before {
+    content: '';
+    position: absolute;
+    top: 6px; left: 6px; right: 6px; bottom: 6px;
+    border: 1px dashed rgba(197, 155, 39, 0.35);
+    border-radius: calc(var(--border-radius-md) - 4px);
+    pointer-events: none;
+}
+
+.daily-menu-badge {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    background-color: var(--accent-gold);
+    color: #1a100b;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+.daily-menu-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    background-color: rgba(197, 155, 39, 0.15);
+    border: 1px solid var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold);
+}
+
+.daily-menu-body {
+    flex: 1;
+}
+
+.daily-menu-title {
+    font-family: var(--font-title);
+    font-size: 1.45rem;
+    color: var(--accent-gold);
+    margin-bottom: 4px;
+}
+
+.daily-menu-highlight {
+    font-family: var(--font-accent);
+    font-size: 1.65rem;
+    color: var(--text-light);
+    line-height: 1.25;
+    margin-bottom: 8px;
+}
+
+.daily-menu-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted-light);
+    line-height: 1.5;
+}
+
+.daily-menu-cta {
+    flex-shrink: 0;
+}
+
+.carta-footer-notice {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background: #fff;
+    border-radius: var(--border-radius-md);
+    border: 1px dashed var(--accent-gold);
+    box-shadow: var(--shadow-sm);
+}
+
+.carta-footer-notice p {
+    font-family: var(--font-title);
+    font-size: 1.15rem;
+    color: var(--primary-mid);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .daily-menu-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 44px 20px 24px;
+        gap: 16px;
+    }
+    .daily-menu-badge {
+        top: 12px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    .daily-menu-cta {
+        width: 100%;
+    }
+    .daily-menu-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ==========================================
    MENÚ SETMANAL (PISSARRA FOSCA PREMIUM)
    ========================================== */
 .weekly-menu-section {
